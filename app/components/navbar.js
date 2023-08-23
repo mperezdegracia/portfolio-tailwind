@@ -53,18 +53,20 @@ export function StickyNavbar({ toggleDarkMode, darkMode }) {
           onClick={(e) => {
             e.preventDefault();
             scrollToSection("body");
+            setOpenNav(false); // Close the menu
           }}
           className="flex items-center font-primary transition-all duration-300 hover:bg-primary_light hover:text-secondary_light hover:rounded-lg px-4 py-2 cursor-pointer"
         >
           {data.bar_link1}
         </a>
       </Typography>
-
+  
       <Typography as="li" variant="lead" className="p-1">
         <a
           onClick={(e) => {
             e.preventDefault();
             scrollToSection(data.bar_link3.toLowerCase());
+            setOpenNav(false); // Close the menu
           }}
           className="flex items-center font-primary transition-all duration-300 hover:bg-primary_light hover:text-secondary_light hover:rounded-lg px-4 py-2 cursor-pointer"
         >
@@ -76,6 +78,7 @@ export function StickyNavbar({ toggleDarkMode, darkMode }) {
           onClick={(e) => {
             e.preventDefault();
             scrollToSection(data.bar_link4.toLowerCase());
+            setOpenNav(false); // Close the menu
           }}
           className="flex items-center font-primary transition-all duration-300 hover:bg-primary_light hover:text-secondary_light hover:rounded-lg px-4 py-2 cursor-pointer"
         >

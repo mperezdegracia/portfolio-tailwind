@@ -13,7 +13,7 @@ import { education } from "../data/educationData";
   export function TimelineWithIcon() {
     const data = education;
     return (
-      <div className="lg:w-[50%] sm:min-w-none md:min-w-[32rem] bg-primary_light dark:bg-secondary rounded-xl p-4 ">
+      <div className="lg:w-[50%] sm:min-w-none md:min-w-none bg-primary_light dark:bg-secondary rounded-xl p-4 ">
         <Timeline>
           <TimelineItem>
             <TimelineConnector />
