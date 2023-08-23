@@ -9,7 +9,7 @@ export default function Skills() {
         Skills
       </h1>
 
-      <div class="items-center mx-[20%]">
+      <div class="items-center sm:mx-0 md:mx-[20%] ">
       <Marquee
           gradient={false}
           speed={80}

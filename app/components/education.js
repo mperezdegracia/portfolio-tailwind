@@ -13,7 +13,7 @@ import { education } from "../data/educationData";
   export function TimelineWithIcon() {
     const data = education;
     return (
-      <div className="lg:w-[50%] sm:min-w-none min-w-[32rem] bg-primary_light dark:bg-secondary rounded-xl p-4 ">
+      <div className="lg:w-[50%] sm:min-w-none md:min-w-[32rem] bg-primary_light dark:bg-secondary rounded-xl p-4 ">
         <Timeline>
           <TimelineItem>
             <TimelineConnector />
@@ -26,7 +26,7 @@ import { education } from "../data/educationData";
               </Typography>
             </TimelineHeader>
             <TimelineBody className="pb-8">
-              <Typography color="gary" className="font-normal text-gray-400 font-primary">
+              <Typography  className="font-normal text-gray-400 font-primary">
                     {data.institution_hs}
                     <br></br>
                     <strong className="font-bold">{data.description_hs}</strong>
@@ -44,7 +44,7 @@ import { education } from "../data/educationData";
               </Typography>
             </TimelineHeader>
             <TimelineBody className="pb-8">
-              <Typography color="gary" className="font-normal text-gray-400 font-primary">
+              <Typography  className="font-normal text-gray-400 font-primary">
                 {data.institution_uni}
               </Typography>
             </TimelineBody>

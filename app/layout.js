@@ -2,10 +2,12 @@
 import React, { useEffect, useState } from "react";
 import NavbarDefault, { StickyNavbar } from "./components/navbar";
 import "./globals.css";
+import 'font-awesome/css/font-awesome.min.css';
+
 
 export default function RootLayout({ children }) {
   const [darkMode, setDarkMode] = useState(false);
-
+  
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
   };
