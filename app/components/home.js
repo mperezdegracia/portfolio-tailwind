@@ -24,10 +24,10 @@ export function ProfileCard({data}) {
         <img src="mateo_2.jpg" alt="profile-picture"/>
       </CardHeader>
       <CardBody className="text-center">
-        <Typography variant="h4" className="text-contrast  font-primary mb-2 ">
+        <Typography variant="h4" className="text-contrast font-medium font-primary mb-2 ">
           {data.name}
         </Typography>
-        <Typography variant="h5" className="font-medium font-primary text-tertiary " textGradient>
+        <Typography variant="h5" className="font-medium font-primary dark:text-tertiary text-secondary_light  " textGradient>
           {data.title}
         </Typography>
       </CardBody>

@@ -22,7 +22,7 @@ export default function Skills() {
           {skillsData.map((skill, id) => (
             <div class="bg-primary_light dark:bg-secondary_light rounded-xl mx-5 w-[150px] p-4">
                 <img src={skillsImage(skill)} class="w-10 h-10 m-auto" />
-                <h3 class="text-center m-auto text-contrast ">{skill}</h3>
+                <h3 class="text-center m-auto font-primary text-contrast ">{skill}</h3>
             </div>
           ))}
         </Marquee>

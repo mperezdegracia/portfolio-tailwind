@@ -8,8 +8,10 @@ import {
     Typography,
   } from "@material-tailwind/react";
   import { HomeIcon, BellIcon, CurrencyDollarIcon } from "@heroicons/react/24/solid";
+import { education } from "../data/educationData";
    
   export function TimelineWithIcon() {
+    const data = education;
     return (
       <div className="lg:w-[50%] sm:min-w-none min-w-[32rem] bg-primary_light dark:bg-secondary rounded-xl p-4 ">
         <Timeline>
@@ -20,14 +22,14 @@ import {
                 <HomeIcon className="h-4 w-4" />
               </TimelineIcon>
               <Typography variant="h5" className="text-contrast font-bold font-primary" >
-                Electronics Technician <span className="font-medium">(2015-2020)</span>
+                {data.title_hs} <span className="font-medium">{data.duration_hs}</span>
               </Typography>
             </TimelineHeader>
             <TimelineBody className="pb-8">
-              <Typography color="gary" className="font-normal text-gray-400">
-                    ECEA Tecnical School.
+              <Typography color="gary" className="font-normal text-gray-400 font-primary">
+                    {data.institution_hs}
                     <br></br>
-                    <strong className="font-bold">Circuit Analysis, PCB fabrication and design.</strong>
+                    <strong className="font-bold">{data.description_hs}</strong>
                      
               </Typography>
             </TimelineBody>
@@ -38,12 +40,12 @@ import {
                 <BellIcon className="h-4 w-4" />
               </TimelineIcon>
               <Typography variant="h5" className="text-contrast font-bold font-primary " >
-                Software Engineer  <span className="font-medium">(2021-2026)</span>
+                {data.title_uni}  <span className="font-medium">{data.duration_uni}</span>
               </Typography>
             </TimelineHeader>
             <TimelineBody className="pb-8">
-              <Typography color="gary" className="font-normal text-gray-400">
-                Buenos Aires Institute of Technology
+              <Typography color="gary" className="font-normal text-gray-400 font-primary">
+                {data.institution_uni}
               </Typography>
             </TimelineBody>
           </TimelineItem>

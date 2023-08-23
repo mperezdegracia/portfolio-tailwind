@@ -1,8 +1,8 @@
 export const projects_data = [{
-    title: '',
-    description: '',
+    title: 'Kernel',
+    description: 'Made a Kernel based on Pure64 with basic functionality. Terminal, Register Capture, etc.',
     img: '',
-    skills: []
+    skills: ['docker', 'C']
 },
 {
     title: '',
@@ -16,22 +16,5 @@ export const projects_data = [{
     img: '',
     skills: []
 },
-{
-    title: '',
-    description: '',
-    img: '',
-    skills: []
-},
-{
-    title: '',
-    description: '',
-    img: '',
-    skills: []
-},
-{
-    title: '',
-    description: '',
-    img: '',
-    skills: []
-},
+
 ]

@@ -65,17 +65,7 @@ export function StickyNavbar({ toggleDarkMode, darkMode }) {
               {data.bar_link1}
             </a>
           </Typography>
-          <Typography as="li" variant="lead" className="p-1">
-            <a
-              onClick={(e) => {
-                e.preventDefault();
-                scrollToSection(data.bar_link2.toLowerCase());
-              }}
-              className="flex items-center font-primary"
-            >
-              {data.bar_link2}
-            </a>
-          </Typography>
+          
           <Typography as="li" variant="lead" className="p-1">
             <a
               onClick={(e) => {
@@ -117,7 +107,7 @@ export function StickyNavbar({ toggleDarkMode, darkMode }) {
                         size="sm"
                         className="hidden bg-opacity-100 lg:inline-block bg-tertiary"
                     >
-                        <span>{data.buttonText}</span>
+                        <span className="font-primary">{data.buttonText}</span>
                     </Button>
                     <IconButton
                         variant="text"
@@ -161,7 +151,7 @@ export function StickyNavbar({ toggleDarkMode, darkMode }) {
             <Collapse open={openNav}>
                 {navList}
                 <Button  size="sm" fullWidth className="mb-2 bg-tertiary">
-                    <span>{data.buttonText}</span>
+                    <span className="font-primary">{data.buttonText}</span>
                 </Button>
             </Collapse>
         </Navbar>
