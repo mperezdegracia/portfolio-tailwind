@@ -84,7 +84,7 @@ export function ProfileCard({ data }) {
 export default function Presentation() {
   const home_data = homeData;
   return (
-    <div className=" md:flex justify-center items-center pt-10 min-h-full mb-10">
+    <div className=" md:flex justify-center  pt-10 md:max-h-[700px] mb-10">
       <ProfileCard data={home_data}></ProfileCard>
       <div className="md:mx-3 mx-auto lg:w-2/3 items-center py-5 px-10">
         <Typography className="text-secondary_light  dark:text-contrast font-light font-primary lg:w-auto lg:text-3xl md:text-xl ">

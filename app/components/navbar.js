@@ -38,7 +38,7 @@ export function StickyNavbar({ toggleDarkMode, darkMode }) {
     const section = document.getElementById(sectionId);
     if (section) {
       // Calculate the target scroll position, accounting for the navbar height
-      const scrollPosition = section.offsetTop - navbarHeight;
+      const scrollPosition = section.offsetTop - navbarHeight - 20; // random el 20 pero messirve
       window.scrollTo({
         top: scrollPosition,
         behavior: "smooth",
@@ -60,7 +60,7 @@ export function StickyNavbar({ toggleDarkMode, darkMode }) {
           {data.bar_link1}
         </a>
       </Typography>
-  
+
       <Typography as="li" variant="lead" className="p-1">
         <a
           onClick={(e) => {
@@ -102,12 +102,16 @@ export function StickyNavbar({ toggleDarkMode, darkMode }) {
         </button>
         <div className="flex items-center gap-4">
           <div className="mr-4 hidden lg:block">{navList}</div>
-          <Button
-            size="sm"
-            className="hidden bg-opacity-100 lg:inline-block bg-tertiary"
-          >
-            <span className="font-primary text-lg">{data.buttonText}</span>
-          </Button>
+          <a href="https://www.linkedin.com/in/mperezdegracia/">
+
+            <Button
+              size="sm"
+              className="hidden bg-opacity-100 lg:inline-block bg-tertiary"
+            >
+              <span className="font-primary text-lg">{data.buttonText}</span>
+            </Button>
+
+          </a>
           <IconButton
             variant="text"
             className="ml-auto h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
@@ -149,9 +153,13 @@ export function StickyNavbar({ toggleDarkMode, darkMode }) {
       </div>
       <Collapse open={openNav}>
         {navList}
-        <Button size="md" fullWidth className="mb-2 bg-tertiary">
-          <span className="font-primary text-lg">{data.buttonText}</span>
-        </Button>
+        <a href="https://www.linkedin.com/in/mperezdegracia/">
+          <Button size="md" fullWidth className="mb-2 bg-tertiary">
+            <span className="font-primary text-lg">{data.buttonText}</span>
+          </Button>
+
+        </a>
+
       </Collapse>
     </Navbar>
   );
