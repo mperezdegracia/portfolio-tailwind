@@ -25,7 +25,7 @@ export function StickyNavbar({ toggleDarkMode, darkMode }) {
   }, []);
 
   const [navbarHeight, setNavbarHeight] = useState(0);
-
+  const sleep = ms => new Promise(r => setTimeout(r, ms));
   useEffect(() => {
     // Calculate the height of the sticky navbar
     const navbar = document.getElementById("navbar");
@@ -45,6 +45,11 @@ export function StickyNavbar({ toggleDarkMode, darkMode }) {
       });
     }
   };
+  const handleNavItemClick = (sectionId) => {
+    scrollToSection(sectionId);
+    // Close the menu on mobile
+    //setOpenNav(false);
+  };
 
   const navList = (
     <ul className="mb-4 mt-2 dark:text-white flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
@@ -52,8 +57,7 @@ export function StickyNavbar({ toggleDarkMode, darkMode }) {
         <a
           onClick={(e) => {
             e.preventDefault();
-            scrollToSection("body");
-            setOpenNav(false); // Close the menu
+            handleNavItemClick("body");
           }}
           className="flex items-center font-primary transition-all duration-300 hover:bg-primary_light hover:text-secondary_light hover:rounded-lg px-4 py-2 cursor-pointer"
         >
@@ -65,8 +69,7 @@ export function StickyNavbar({ toggleDarkMode, darkMode }) {
         <a
           onClick={(e) => {
             e.preventDefault();
-            scrollToSection(data.bar_link3.toLowerCase());
-            setOpenNav(false); // Close the menu
+            handleNavItemClick(data.bar_link3.toLowerCase());
           }}
           className="flex items-center font-primary transition-all duration-300 hover:bg-primary_light hover:text-secondary_light hover:rounded-lg px-4 py-2 cursor-pointer"
         >
@@ -77,8 +80,7 @@ export function StickyNavbar({ toggleDarkMode, darkMode }) {
         <a
           onClick={(e) => {
             e.preventDefault();
-            scrollToSection(data.bar_link4.toLowerCase());
-            setOpenNav(false); // Close the menu
+            handleNavItemClick(data.bar_link4.toLowerCase());
           }}
           className="flex items-center font-primary transition-all duration-300 hover:bg-primary_light hover:text-secondary_light hover:rounded-lg px-4 py-2 cursor-pointer"
         >

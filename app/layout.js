@@ -6,7 +6,7 @@ import 'font-awesome/css/font-awesome.min.css';
 
 
 export default function RootLayout({ children }) {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
   
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
