@@ -6,6 +6,9 @@
 
 
 
-body * {
-    @apply transition-colors duration-700;
+
+@layer base {
+    body {
+        @apply dark:bg-primary bg-contrast_light transition-colors duration-700;
+    }
 }

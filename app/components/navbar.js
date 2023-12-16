@@ -9,12 +9,10 @@ import {
   Collapse,
   Card,
 } from "@material-tailwind/react";
-
-import { MoonIcon } from "@heroicons/react/24/outline";
-
+import ThemeButton from "./theme_button";
 import { navbarData } from "../data/navbarData";
 
-export function StickyNavbar({ toggleDarkMode, darkMode }) {
+export function StickyNavbar() {
   const [openNav, setOpenNav] = useState(false);
   const data = navbarData;
   useEffect(() => {
@@ -47,8 +45,6 @@ export function StickyNavbar({ toggleDarkMode, darkMode }) {
   };
   const handleNavItemClick = (sectionId) => {
     scrollToSection(sectionId);
-    // Close the menu on mobile
-    //setOpenNav(false);
   };
 
   const navList = (
@@ -57,7 +53,7 @@ export function StickyNavbar({ toggleDarkMode, darkMode }) {
         <a
           onClick={(e) => {
             e.preventDefault();
-            handleNavItemClick("body");
+            handleNavItemClick("home");
           }}
           className="flex items-center font-primary transition-all duration-300 hover:bg-primary_light hover:text-secondary_light hover:rounded-lg px-4 py-2 cursor-pointer"
         >
@@ -96,12 +92,7 @@ export function StickyNavbar({ toggleDarkMode, darkMode }) {
       className="sticky top-0 z-10 rounded-2xl dark:border-black bg-primary_light dark:bg-secondary h-max max-w-full  py-2 px-4 lg:px-8 lg:py-4"
     >
       <div className="flex items-center justify-between text-contrast">
-        <button
-          onClick={toggleDarkMode}
-          className="px-4 py-2 rounded-lg bg-tertiary dark:bg-blue-900 text-gray-300 hover:bg-gray-600 "
-        >
-          <MoonIcon className="h-6 w-6 text-white" />
-        </button>
+        <ThemeButton></ThemeButton>
         <div className="flex items-center gap-4">
           <div className="mr-4 hidden lg:block">{navList}</div>
           <a href="https://www.linkedin.com/in/mperezdegracia/">

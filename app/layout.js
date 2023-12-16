@@ -1,35 +1,19 @@
 "use client";
-import React, { useEffect, useState } from "react";
-import NavbarDefault, { StickyNavbar } from "./components/navbar";
+import { StickyNavbar } from "./components/navbar";
 import "./globals.css";
-import 'font-awesome/css/font-awesome.min.css';
-
+import "font-awesome/css/font-awesome.min.css";
+import { ThemeProvider } from "next-themes";
 
 export default function RootLayout({ children }) {
-  const [darkMode, setDarkMode] = useState(true);
-  
-  const toggleDarkMode = () => {
-    setDarkMode(!darkMode);
-  };
-  // Use useEffect to apply the dark mode class after rendering
-  useEffect(() => {
-    document.body.classList.toggle("dark", darkMode);
-  }, [darkMode]);
-
   return (
-    <html lang="en">
-      <body id="body">
-        <div
-          className={`dark:bg-primary bg-contrast_light min-h-screen p-4 ${
-            darkMode ? "dark" : ""
-          }`}
-        >
-          <StickyNavbar
-            toggleDarkMode={toggleDarkMode}
-            darkMode={darkMode}
-          ></StickyNavbar>
-          {children}
-        </div>
+    <html lang="es">
+      <body>
+        <ThemeProvider attribute="class">
+          <div className="p-5" id="home">
+            <StickyNavbar></StickyNavbar>
+            {children}
+          </div>
+        </ThemeProvider>
       </body>
     </html>
   );

@@ -42,12 +42,12 @@ export function ProfileCard({ data }) {
         <Tooltip content="Github">
           <a
             href={data.github}
-            class="bg-gray-700 p-2 font-semibold text-white inline-flex items-center space-x-2 rounded"
+            className="bg-gray-700 p-2 font-semibold text-white inline-flex items-center space-x-2 rounded"
           >
             <svg
               aria-hidden="true"
               role="img"
-              class="w-5"
+              className="w-5"
               preserveAspectRatio="xMidYMid meet"
               viewBox="0 0 24 24"
             >
@@ -65,10 +65,10 @@ export function ProfileCard({ data }) {
         <Tooltip content="Linkedin">
           <a
             href={data.linkedin}
-            class="bg-blue-600 p-2 font-semibold text-white inline-flex items-center space-x-2 rounded"
+            className="bg-blue-600 p-2 font-semibold text-white inline-flex items-center space-x-2 rounded"
           >
             <svg
-              class="w-5 h-5 fill-current"
+              className="w-5 h-5 fill-current"
               role="img"
               viewBox="0 0 256 256"
               xmlns="http://www.w3.org/2000/svg"
