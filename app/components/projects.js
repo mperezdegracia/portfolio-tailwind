@@ -2,7 +2,7 @@ import { projects_data } from "../data/projectsData";
 
 export function ProjectCard({ data }) {
   return (
-    <div className="max-w-sm rounded-lg shadow dark:bg-secondary  bg-primary_light dark:border-gray-700 flex flex-col justify-between">
+    <div className="max-w-sm rounded-lg shadow dark:bg-secondary  bg-primary_light dark:border-gray-700 flex flex-col justify-between ">
       <div>
         <a href={data.link}>
           <img className="rounded-t-lg" src="code.jpg" alt="" />
@@ -16,7 +16,7 @@ export function ProjectCard({ data }) {
             </h5>
           </a>
 
-          <p className="mb-3 font-normal text-gray-400  dark:text-contrast font-primary">
+          <p className="mb-3 font-normal text-gray-200  dark:text-contrast font-primary">
             {data.description}
           </p>
         </div>

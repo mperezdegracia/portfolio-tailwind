@@ -89,7 +89,7 @@ export function StickyNavbar() {
   return (
     <Navbar
       id="navbar"
-      className="sticky top-0 z-10 rounded-2xl dark:border-black bg-primary_light dark:bg-secondary h-max max-w-full  py-2 px-4 lg:px-8 lg:py-4"
+      className="sticky top-0 z-10 rounded-2xl dark:border-black bg-primary_light2 dark:bg-secondary h-max max-w-full  py-2 px-4 lg:px-8 lg:py-4"
     >
       <div className="flex items-center justify-between text-contrast">
         <ThemeButton></ThemeButton>
